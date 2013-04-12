@@ -7,7 +7,7 @@ require 'comma_separated_storage/version'
 Gem::Specification.new do |gem|
   gem.name          = "comma_separated_storage"
   gem.version       = CommaSeparatedStorage::VERSION
-  gem.authors       = ["conanite"]
+  gem.authors       = ["Conan Dalton"]
   gem.email         = ["conan@conandalton.net"]
   gem.description   = %q{Create utility methods to access an attribute as a list but store it as a comma-separated string}
   gem.summary       = %q{Given an object with a string attribute containing a comma-separated list of items,
