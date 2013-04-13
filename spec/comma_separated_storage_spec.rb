@@ -68,6 +68,12 @@ describe CommaSeparatedStorage do
       widget.languages = ""
       widget.language_list.should == []
     end
+
+    it "should convert a non-array argument to an array of length 1" do
+      widget.language_list = "ru"
+      widget.languages.should == "ru"
+      widget.language_list.should == ["ru"]
+    end
   end
 
   describe "each_lang" do

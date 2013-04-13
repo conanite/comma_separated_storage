@@ -9,6 +9,7 @@ module CommaSeparatedStorage
     line = __LINE__ + 1
     code = %{
       def #{singular}_list= array
+        array = [array] unless array.is_a?(Array)
         self.#{attribute}= array.join(',')
       end
 
