@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Given an object with a string attribute containing a comma-separated list of items,
 this gem makes it easier to deal with the list even though it is stored as a string}
 
-  gem.homepage      = "https://github.com/conanite/polyglot"
+  gem.homepage      = "https://github.com/conanite/comma_separated_storage"
 
   gem.add_development_dependency 'rspec', '~> 2.9'
 
