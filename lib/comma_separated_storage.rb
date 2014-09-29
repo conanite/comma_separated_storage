@@ -14,7 +14,7 @@ module CommaSeparatedStorage
       end
 
       def #{singular}_list
-        (self.#{attribute} || "").split(/,/)
+        (self.#{attribute} || "").split(/,/).map &:strip
       end
 
       def #{interrogator} item
@@ -34,4 +34,3 @@ module CommaSeparatedStorage
     class_eval code, __FILE__, line
   end
 end
-

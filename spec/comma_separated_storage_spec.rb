@@ -36,6 +36,16 @@ describe CommaSeparatedStorage do
       widget.speaks?("it").should == "it"
     end
 
+    it "should ignore intervening whitespace" do
+      widget.languages = "   it ,fr
+,  en,\t\t\t      de
+"
+      widget.default_language.should == :it
+      widget.speaks?("ru").should == false
+      widget.speaks?("it").should == "it"
+      widget.language_list.should == ["it", "fr", "en", "de"]
+    end
+
     it "should return default language if it is the only one" do
       widget.languages = "it"
       widget.single_language.should == "it"
