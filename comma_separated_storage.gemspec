@@ -15,7 +15,8 @@ this gem makes it easier to deal with the list even though it is stored as a str
 
   gem.homepage      = "https://github.com/conanite/comma_separated_storage"
 
-  gem.add_development_dependency 'rspec', '~> 2.9'
+  gem.add_development_dependency 'rspec', '~> 3.1'
+  gem.add_development_dependency 'rspec_numbering_formatter'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
